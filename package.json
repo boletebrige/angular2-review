@@ -1,0 +1,23 @@
+{
+  "name": "angular2-review",
+  "version": "1.0.0",
+  "description": "Lorem Ipsum Dolor Sit Amet",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boletebrige/angular2-review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boletebrige/angular2-review/issues"
+  },
+  "homepage": "https://github.com/boletebrige/angular2-review#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

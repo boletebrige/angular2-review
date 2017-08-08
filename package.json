@@ -4,7 +4,11 @@
   "description": "Lorem Ipsum Dolor Sit Amet",
   "main": "index.js",
   "scripts": {
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "postinstall": "typings install"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,8 @@
   },
   "homepage": "https://github.com/boletebrige/angular2-review#readme",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "typescript": "^2.4.2",
+    "typings": "^2.1.1"
   }
 }

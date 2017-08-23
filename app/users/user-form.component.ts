@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { User } from '../shared/models/user';
 
 @Component ({
@@ -12,7 +12,7 @@ import { User } from '../shared/models/user';
         }
     `],
     template: `
-        <form #form="ngForm">
+        <form #form="ngForm" (ngSubmit)="onSubmit()" *ngIf="active">
             {{ form.valid }}
             <div class="form-group" [ngClass]="{'has-error': username.invalid && username.touched }">
                 <input type="text" class="form-control" 
@@ -39,5 +39,18 @@ import { User } from '../shared/models/user';
 })
 
 export class UserFormComponent {
+    @Output() userCreated = new EventEmitter();
     newUser: User = new User();
+    active: boolean = true;
+
+    onSubmit(){
+        // show the event that user was created
+        this.userCreated.emit({ user: this.newUser });
+        console.log(this.newUser);
+        
+
+        this.newUser = new User;
+        this.active = !true;
+        setTimeout(()=> this.active = true, 0);
+    }
 }

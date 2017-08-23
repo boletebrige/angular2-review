@@ -26,8 +26,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <header>\n            <nav class=\"navbar navbar-inverse\">\n                <div class=\"navbar-header\">\n                    <a href=\"/\" class=\"navbar-brand\">My Angular 2 App!</a>\n                </div>\n            </nav>\n        </header>\n        <main>\n            <div class=\"row\">\n                <div class=\"col-sm-4\">\n                    <ul class=\"list-group users-list\">\n                        <li class=\"list-group-item\" \n                            *ngFor=\"let user of users\" \n                            (click)=\"selectUser(user)\"\n                            [class.active]=\"user == activeUser\">\n                            {{ user.name }} ({{ user.username }})</li>\n                    </ul>\n                </div>\n                <div class=\"col-sm-8\">\n                    <div class=\"jumbotron text-center\" *ngIf=\"activeUser\">\n                        <h2>{{ activeUser.name }} <small>{{ activeUser.username }}</small></h2>\n                        <input class=\"form-control\" [(ngModel)]=\"activeUser.name\">\n                    </div>\n                    <div class=\"jumbotron gocrazy\" *ngIf=\"!activeUser\">\n                        <span class=\"glyphicon glyphicon-hand-left\"></span>\n                        <h2>Choose a User</h2>\n                    </div>\n                </div>\n            </div>\n        </main>\n        <footer class=\"text-center\">\n            Copyleft \u2763 2016\n        </footer>\n    ",
-            styles: ["\n        .users-list li {\n            cursor: pointer;\n        }\n        .jumbotron .glyphicon { font-size: 80px; }\n        .gocrazy {\n            background: red;\n            color: #FFF;\n        }\n    "]
+            templateUrl: './app/app.component.html',
+            styleUrls: ['./app/app.component.css']
         })
     ], AppComponent);
     return AppComponent;
